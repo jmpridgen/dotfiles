@@ -1,0 +1,8 @@
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+  ff = false
+[user]
+  email = jmpridgen@gmail.com
+  name = Max Pridgen
