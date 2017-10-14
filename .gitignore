@@ -1,5 +1,5 @@
 
-vim/bundle/**
-!vim/bundle/vundle
+vim-dotfiles/vim/bundle/**
+!vim-dotfiles/vim/bundle/vundle
 
 .DS_Store

@@ -7,9 +7,10 @@
 - link:
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
+    ~/.vim: vim-dotfiles/vim
+    ~/.vimrc: vim-dotfiles/vimrc
+    ~/.zshrc: zsh-dotfiles/zshrc
+    ~/.oh-my-zsh: zsh-dotfiles/oh-my-zsh
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
 

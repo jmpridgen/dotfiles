@@ -8,19 +8,17 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim', {'name': 'vundle'}
-" Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'janko-m/vim-test'
 Plugin 'pangloss/vim-javascript'
-" Plugin 'slim-template/vim-slim'
-" Plugin 'tpope/vim-bundler'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()

@@ -10,11 +10,6 @@ set number        " Make line numbers
 set nobackup
 set nowritebackup
 
-" Add the bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
-
 " Make sure to use h,j,k,l
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -28,3 +23,9 @@ endif
 
 " Turn on syntax highlighting
 syntax on
+
+" Add the bundles
+source ~/.dotfiles/vim-dotfiles/vimrc.bundles
+
+autocmd bufwritepost .vimrc source $MYVIMRC
+
