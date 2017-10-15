@@ -5,6 +5,7 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set number        " Make line numbers
+set t_Co=256      " Tell Vim that terminal supports 256
 
 " do not make backup files
 set nobackup
@@ -31,5 +32,11 @@ source ~/.dotfiles/vim-dotfiles/vimrc.bundles
 let NERDTreeShowHidden=1
 let g:ctrlp_show_hidden=1
 
-autocmd bufwritepost .vimrc source $MYVIMRC
+" Autoload vimrc when it changes
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,vimrc so $MYVIMRC
+augroup end
 
+" Integrate airline with the powerline fonts
+let g:airline_powerline_fonts = 1

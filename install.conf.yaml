@@ -7,6 +7,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
+    ~/.profile: profile
     ~/.vim: vim-dotfiles/vim
     ~/.vimrc: vim-dotfiles/vimrc
     ~/.zshrc: zsh-dotfiles/zshrc
