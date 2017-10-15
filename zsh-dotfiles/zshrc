@@ -11,3 +11,6 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="max"
 
 alias rl='source ~/.zshrc && echo "Reloaded zshrc!\n"'
+
+# oh-my-zsh plugins
+plugins=(brew node npm)
