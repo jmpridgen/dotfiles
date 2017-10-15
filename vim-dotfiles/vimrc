@@ -27,5 +27,9 @@ syntax on
 " Add the bundles
 source ~/.dotfiles/vim-dotfiles/vimrc.bundles
 
+" Show hidden files in NERDTree and CTRLp
+let NERDTreeShowHidden=1
+let g:ctrlp_show_hidden=1
+
 autocmd bufwritepost .vimrc source $MYVIMRC
 
