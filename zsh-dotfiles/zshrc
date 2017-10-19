@@ -13,4 +13,10 @@ DEFAULT_USER="max"
 alias rl='source ~/.zshrc && echo "Reloaded zshrc!\n"'
 
 # oh-my-zsh plugins
-plugins=(brew node npm)
+# plugins=(brew node npm)
+
+# alias to run npm modules
+alias npm-exec='PATH=$(npm bin):$PATH'
+
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export ANDROID_HOME=/usr/local/share/android-sdk
