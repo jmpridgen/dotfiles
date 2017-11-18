@@ -1,11 +1,24 @@
 " common settings
-set ruler         " show the cursor position all the time
-set showcmd       " display incomplete commands
-set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
-set autowrite     " Automatically :write before running commands
-set number        " Make line numbers
-set t_Co=256      " Tell Vim that terminal supports 256
+" show the cursor position all the time
+set ruler
+" display incomplete commands
+set showcmd
+" do incremental searching
+set incsearch
+" Always display the status line
+set laststatus=2
+" Automatically :write before running commands
+set autowrite
+" Tell Vim that terminal supports 256
+set t_Co=256
+" Set relative and absolute line numbers
+set number relativenumber
+" Set relative numbers only on focused buffer
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " do not make backup files
 set nobackup
@@ -25,12 +38,11 @@ endif
 " Turn on syntax highlighting
 syntax on
 
+" Set the update time for async operations
+set updatetime=250
+
 " Add the bundles
 source ~/.dotfiles/vim-dotfiles/vimrc.bundles
-
-" Show hidden files in NERDTree and CTRLp
-let NERDTreeShowHidden=1
-let g:ctrlp_show_hidden=1
 
 " Autoload vimrc when it changes
 augroup myvimrc
@@ -38,23 +50,31 @@ augroup myvimrc
   au BufWritePost .vimrc,vimrc so $MYVIMRC
 augroup end
 
+" BUNDLE SETTINGS
+" Show hidden files in NERDTree and CTRLp
+let NERDTreeShowHidden=1
+let g:ctrlp_show_hidden=1
+
 " Integrate airline with the powerline fonts
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 " Allow jsx syntax highlighting on js files
-let g:jsx_ext_required = 0
+let g:jsx_ext_required=0
 
 " Common syntastic settings
-let g:airline#extensions#syntastic#enabled = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:airline#extensions#syntastic#enabled=1
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_javascript_checkers=['eslint']
 
-" let airline#extensions#syntastic#error_symbol = 'E:'
-" let airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}'
-" let airline#extensions#syntastic#warning_symbol = 'W:'
-" let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
-      
+" set git gutter to display realtime diffs
+let g:gitgutter_realtime=1
 
-let g:syntastic_javascript_checkers = ['eslint']
+" show existing tab with 4 spaces width
+set tabstop=2
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set expandtab

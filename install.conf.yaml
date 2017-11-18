@@ -10,8 +10,12 @@
     ~/.profile: profile
     ~/.vim: vim-dotfiles/vim
     ~/.vimrc: vim-dotfiles/vimrc
+    ~/.config/nvim: nvim
     ~/.zshrc: zsh-dotfiles/zshrc
+    ~/.zprofile: zsh-dotfiles/zprofile
+    ~/.zshenv: zsh-dotfiles/zshenv
     ~/.oh-my-zsh: zsh-dotfiles/oh-my-zsh
+    ~/.emacs_zsh: emacs-dotfiles/emacs_zsh
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
 

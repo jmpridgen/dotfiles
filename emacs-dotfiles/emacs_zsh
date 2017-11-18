@@ -1,0 +1,2 @@
+echo "loading emacs_zsh"
+     source ~/.profile
