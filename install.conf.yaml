@@ -16,6 +16,7 @@
     ~/.zshenv: zsh-dotfiles/zshenv
     ~/.oh-my-zsh: zsh-dotfiles/oh-my-zsh
     ~/.emacs_zsh: emacs-dotfiles/emacs_zsh
+    ~/.spacemacs.d: spacemacs-dotfiles
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
 
