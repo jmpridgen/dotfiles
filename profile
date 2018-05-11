@@ -10,3 +10,8 @@ export ANDROID_HOME=/usr/local/share/android-sdk
 # make asdf work with homebrew
 source /usr/local/opt/asdf/asdf.sh
 
+# make the command prompt read the current directory instead of the current command
+if [ $ITERM_SESSION_ID ]; then
+  echo "Resetting the PROMPT_COMMAND"
+  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+fi
