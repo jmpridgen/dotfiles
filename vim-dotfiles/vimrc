@@ -41,6 +41,12 @@ syntax on
 " Set the update time for async operations
 set updatetime=250
 
+" Add matchit for better matching of % operator
+packadd! matchit
+
+" use Mac clipboard
+set clipboard=unnamed
+
 " Add the bundles
 source ~/.dotfiles/vim-dotfiles/vimrc.bundles
 
