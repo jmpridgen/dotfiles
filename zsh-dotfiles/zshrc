@@ -25,4 +25,10 @@ alias rl='source ~/.zshrc && echo "Reloaded zshrc!\n"'
 alias npm-exec='PATH=$(npm bin):$PATH'
 
 source /usr/local/opt/asdf/asdf.sh
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+# export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+# Use zsh-completions from homebrew
+# These could have come from oh-my-zsh
+# plugins but it is not normally included
+# and would require another submodule :/
+fpath=(/usr/local/share/zsh-completions $fpath)
