@@ -14,3 +14,6 @@ source /usr/local/opt/asdf/asdf.sh
 if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ';
 fi
+
+# Add ~/.bin to path
+export PATH="$PATH:$HOME/.bin"

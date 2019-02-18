@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+# Find the number of already open frames
+number_of_frames=$(emacsclient -a '' -e "(length (frame-list))")
+# echo "Number of open frames is $number_of_frames"
+# If number of frames is 1, then we need to open a new emacs frame
+if [ $number_of_frames -le 1 ]; then
+  # echo "number of frames is less than or equal to 1"
+  emacsclient -a '' -nc $@
+else
+  # echo "it's not less than 1"
+  # If number of frames is greater than 1, then we can use an already existing frame
+  emacsclient -n $@
+fi

@@ -19,6 +19,7 @@
     ~/.spacemacs.d: spacemacs-dotfiles
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.bin: bin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
